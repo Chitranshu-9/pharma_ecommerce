@@ -24,9 +24,9 @@ const RightContainer = () => {
     dispatch(listProducts());
   }, [dispatch]);
   return (
-    <div className='rightContainer'>
- <>
-          {/* <Row>
+    <div className="rightContainer">
+      <>
+        {/* <Row>
             {products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
                 <Product product={product} />
@@ -34,23 +34,31 @@ const RightContainer = () => {
             ))}
           </Row> */}
 
-          <Row style={{
-            display:"flex", flexFlow:"row wrap !importent",width:"100% !importent", justifyContent:"left !importent",alignItems:"left !importent",
-            margin:"auto"
-            }}>
-            {products.map((product) => (
+        <Row
+          style={{
+            display: 'flex',
+            flexFlow: 'row wrap !importent',
+            width: '100% !importent',
+            justifyContent: 'left !importent',
+            alignItems: 'left !importent',
+            margin: 'auto',
+          }}
+        >
+          {products &&
+            products.map((product) => (
               // <col key={product._id} style={{display:"inline-block",padding:"0px,1rem,0px 1rem"}}>
-                <Product product={product} />
+              <Product product={product} />
               // </col>
             ))}
-          </Row>
-          <Paginate
-            pages={pages}
-            page={page}
-            // keyword={keyword ? keyword : ""}
-          />
-        </>      </div>
-  )
-}
+        </Row>
+        <Paginate
+          pages={pages}
+          page={page}
+          // keyword={keyword ? keyword : ""}
+        />
+      </>{' '}
+    </div>
+  );
+};
 
-export default RightContainer
+export default RightContainer;
