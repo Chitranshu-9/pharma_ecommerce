@@ -57,13 +57,8 @@ const PlaceOrderScreen = ({ history }) => {
         taxPrice: cart.taxPrice,
         totalPrice: cart.totalPrice,
       })
-<<<<<<< HEAD
     )
 	history.push('/')
-=======
-    );
-      history.push(`/`);
->>>>>>> aa5ff626d2472d8a079a1166fc4b0d6baf3009d0
   }
 
   return (
