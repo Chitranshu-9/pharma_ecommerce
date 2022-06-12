@@ -58,6 +58,7 @@ const PlaceOrderScreen = ({ history }) => {
         totalPrice: cart.totalPrice,
       })
     )
+	history.push('/')
   }
 
   return (
